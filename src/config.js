@@ -7,6 +7,9 @@ export const MONETIZATION = {
   paywallEnabled: true,
   // Shown on the unlock screen. Real prices come from the store later (RevenueCat).
   displayPrice: '€6.99',
+  // Show a "test unlock" button in the parent area, also on the live site.
+  // Set to false once real store purchases are wired up.
+  testUnlock: true,
 };
 
 export const AVATARS = [

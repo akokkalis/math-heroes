@@ -12,9 +12,11 @@
 //   shown,           // for 'truefalse': the result displayed to the child
 // }
 
+import { generateWordProblem } from './wordProblems.js';
+
 // Difficulty runs from 1 (easiest) to 6 (boss level).
 // ageBand is 'young' (6-8) or 'older' (9-12).
-const RANGES = {
+export const RANGES = {
   add: { young: [10, 20, 20, 50, 100, 100], older: [50, 100, 500, 1000, 1000, 5000] },
   mul: { young: [2, 3, 5, 5, 10, 10], older: [5, 10, 10, 12, 12, 15] },
 };
@@ -108,8 +110,20 @@ function genFrac(ageBand, d, rng) {
 
 const GENERATORS = { add: genAdd, sub: genSub, mul: genMul, div: genDiv, frac: genFrac };
 
+// Four answer choices: the right one, an optional "wrong operation" trap,
+// and close-by distractors.
+export function makeChoices(answer, trap = null, rng = Math.random) {
+  const wrong = [];
+  if (trap !== null && trap !== answer) wrong.push(trap);
+  for (const d of makeDistractors(answer, 4, rng)) if (!wrong.includes(d)) wrong.push(d);
+  return shuffle([answer, ...wrong.slice(0, 3)], rng);
+}
+
 export function generateQuestion(topic, ageBand = 'young', difficulty = 1, rng = Math.random) {
   const d = clampDifficulty(difficulty);
+  if (topic === 'word') {
+    return generateWordProblem(null, ageBand, d, rng, (answer, trap) => makeChoices(answer, trap, rng));
+  }
   const gen = GENERATORS[topic];
   if (!gen) throw new Error(`Unknown topic: ${topic}`);
   const q = gen(ageBand, d, rng);
@@ -119,4 +133,11 @@ export function generateQuestion(topic, ageBand = 'young', difficulty = 1, rng =
 
 export function checkAnswer(question, given) {
   return given === question.answer;
+}
+
+// A word problem for one specific operation (used to mix word problems into boss levels).
+export function generateWordQuestion(subtopic, ageBand = 'young', difficulty = 1, rng = Math.random) {
+  return generateWordProblem(subtopic, ageBand, clampDifficulty(difficulty), rng, (answer, trap) =>
+    makeChoices(answer, trap, rng),
+  );
 }

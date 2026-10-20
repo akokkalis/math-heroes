@@ -70,7 +70,8 @@ export async function saveLevelResult({ profileId, level, answers, rewards }) {
   const day = today();
   await db.transaction('rw', db.profiles, db.progress, db.answers, db.sessions, async () => {
     await db.answers.bulkAdd(
-      answers.map((a) => ({ profileId, day, topic: level.topic, correct: a.correct, ts: Date.now() })),
+      // `correct` = right on the first try (used for the parent report).
+      answers.map((a) => ({ profileId, day, topic: a.topic ?? level.topic, correct: a.correct, ts: Date.now() })),
     );
     const existing = await db.progress.get([profileId, level.id]);
     if (!existing || rewards.stars > existing.stars) {

@@ -24,6 +24,7 @@ src/
   App.jsx                Routes (HashRouter so it also works inside Capacitor)
   game/
     generators.js        Procedural questions per topic, age band and difficulty
+    wordProblems.js      Word problems: 5 characters, items, templates in Greek + English
     worlds.js            The world map: Hercules' labours, 5 levels each, last = boss
     rewards.js           Stars, coins, XP, player level, adaptive difficulty
     entitlement.js       Full-version check; placeholders for store purchase/restore
@@ -60,6 +61,26 @@ src/
 | Questions per level | `src/game/worlds.js` |
 | Add a world | `WORLDS` in `worlds.js` + texts in both JSON files |
 | Avatars and prices | `AVATARS` in `src/config.js` |
+| Add a word problem | `TEMPLATES` in `src/game/wordProblems.js` (instructions at the top) |
+| Hide the test unlock button | `MONETIZATION.testUnlock = false` in `src/config.js` |
+
+## Word problems
+
+The five characters are Μαρία, Νίκος, Ελένη, Γιώργος and Άννα. Each template is
+written once in Greek and once in English; numbers, characters and items change
+every time. Items are neuter or feminine plurals so the Greek grammar is always
+right, and characters carry their Greek forms (η Μαρία, τη Μαρία, της Μαρίας,
+στη Μαρία). `npm test` renders every template in both languages and checks the
+maths, so a broken template is caught before it reaches a child.
+
+Word problems appear in their own world (Τα Μήλα των Εσπερίδων) and as every
+third question in the boss levels of +, −, ×, ÷.
+
+## Wrong answers
+
+1st wrong try: "Try again" (the wrong choice is greyed out). 2nd: a hint
+(for word problems, the calculation to do). 3rd: the answer is shown.
+First-try answers earn a full point, later tries half a point.
 
 In development (`npm run dev`) the parent area has a "Testing: unlock / lock"
 button to try the premium worlds.
@@ -92,7 +113,6 @@ works offline. Purchases and the "Restore purchase" button sit behind the parent
 ## Roadmap ideas
 
 - Badges and daily challenge
-- Word problems (templates with variables, translated per language)
 - Recorded read-aloud audio for young children
 - More topics: time, money (euro), shapes, place value
 - Screen-time limit in the parent area

@@ -12,7 +12,11 @@ export const WORLDS = [
   { id: 'hind', topic: 'mul', emoji: '🦌', color: '#c0703d' },
   { id: 'boar', topic: 'div', emoji: '🐗', color: '#8a5a3c' },
   { id: 'stables', topic: 'frac', emoji: '🏛️', color: '#4a72b8' },
+  { id: 'apples', topic: 'word', emoji: '🍏', color: '#b8962e' },
 ];
+
+// Boss levels of these topics mix in word problems (every 3rd question).
+export const WORD_PROBLEMS_IN_BOSS = ['add', 'sub', 'mul', 'div'];
 
 // Level ids look like "lion-3". The last level of each world is the boss.
 export function levelsOf(world) {

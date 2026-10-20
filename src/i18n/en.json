@@ -1,7 +1,6 @@
 {
   "app.title": "Math Heroes",
   "app.tagline": "Become a hero of mathematics!",
-
   "common.back": "Back",
   "common.start": "Start",
   "common.continue": "Continue",
@@ -11,22 +10,18 @@
   "common.true": "True",
   "common.false": "False",
   "common.language": "Language",
-
   "ops.add": "+",
   "ops.sub": "−",
   "ops.mul": "×",
   "ops.div": "÷",
-
   "topic.add": "Addition",
   "topic.sub": "Subtraction",
   "topic.mul": "Multiplication",
   "topic.div": "Division",
   "topic.frac": "Fractions",
-
   "profiles.title": "Who's playing?",
   "profiles.add": "New player",
   "profiles.parents": "Parents",
-
   "create.title": "New hero",
   "create.name": "What's your name?",
   "create.avatar": "Choose your companion",
@@ -34,7 +29,6 @@
   "create.young": "6–8 years",
   "create.older": "9–12 years",
   "create.submit": "Let's go!",
-
   "map.hello": "Hi, {name}!",
   "map.streak": "🔥 {n} days in a row",
   "map.goal": "Today's goal: {done}/{goal} levels",
@@ -43,7 +37,6 @@
   "map.premium": "Full version",
   "map.shop": "Shop",
   "map.switch": "Switch player",
-
   "world.lion.name": "The Nemean Lion",
   "world.lion.story": "Defeat the lion with the power of addition!",
   "world.hydra.name": "The Lernaean Hydra",
@@ -54,16 +47,24 @@
   "world.boar.story": "Share things fairly to trap the boar!",
   "world.stables.name": "The Augean Stables",
   "world.stables.story": "Clean the stables with fractions!",
-
   "level.progress": "Question {n} of {total}",
   "level.isItTrue": "Is it true?",
   "level.fracQuestion": "Which sign fits?",
   "level.check": "Check",
   "level.quit": "Quit",
   "level.correctAnswer": "The right answer is {answer}",
-  "feedback.correct": ["Well done!", "Perfect!", "Correct!", "You're a star!", "Like Hercules!"],
-  "feedback.wrong": ["Almost!", "That's OK, keep going!", "Next time!"],
-
+  "feedback.correct": [
+    "Well done!",
+    "Perfect!",
+    "Correct!",
+    "You're a star!",
+    "Like Hercules!"
+  ],
+  "feedback.wrong": [
+    "Almost!",
+    "That's OK, keep going!",
+    "Next time!"
+  ],
   "results.great": "Amazing!",
   "results.good": "Very good!",
   "results.tryAgain": "Try again!",
@@ -72,12 +73,10 @@
   "results.xp": "+{n} XP",
   "results.replay": "Play again",
   "results.map": "To the map",
-
   "shop.title": "Shop",
   "shop.use": "Choose",
   "shop.inUse": "In use",
   "shop.notEnough": "You need more coins!",
-
   "parent.gateTitle": "Parents only",
   "parent.gateQuestion": "What is {a} × {b}?",
   "parent.gateWrong": "Wrong answer",
@@ -98,5 +97,22 @@
   "parent.owned": "You have the full version ✓",
   "parent.purchaseUnavailable": "Purchases will be available in the store version.",
   "parent.devUnlock": "Testing: unlock / lock",
-  "parent.privacy": "All data stays on this device."
+  "parent.privacy": "All data stays on this device.",
+  "topic.word": "Word problems",
+  "world.apples.name": "The Apples of the Hesperides",
+  "world.apples.story": "Solve the problems to find the golden apples!",
+  "level.tryAgain": "Try again! 💪",
+  "level.hint": "Hint",
+  "hint.add": "Start at {big} and count up {small} more.",
+  "hint.addBig": "Add the tens first, then the ones.",
+  "hint.sub": "Start at {a} and count back {b}.",
+  "hint.subBig": "Take away the tens first, then the ones.",
+  "hint.mul": "{expr} means: {expansion}",
+  "hint.mulTable": "Think of the {a} times table.",
+  "hint.div": "Which number times {b} makes {a}?",
+  "hint.fracSame": "The bottom numbers are the same, so compare the top numbers.",
+  "hint.fracDiff": "Which piece is bigger? Try making the bottom numbers the same.",
+  "hint.word": "Think about which operation you need:",
+  "results.retries": "+{n} on a second try",
+  "parent.testNote": "Purchases don't work yet. Use the test button."
 }

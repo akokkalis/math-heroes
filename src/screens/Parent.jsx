@@ -114,8 +114,11 @@ function ParentArea() {
         )}
         <button className="link-button" onClick={restore}>{t('parent.restore')}</button>
         {notice && <p className="notice">{notice}</p>}
-        {import.meta.env.DEV && (
-          <button className="link-button muted" onClick={toggleDev}>🛠 {t('parent.devUnlock')}</button>
+        {(import.meta.env.DEV || MONETIZATION.testUnlock) && (
+          <>
+            <p className="muted">{t('parent.testNote')}</p>
+            <button className="link-button" onClick={toggleDev}>🛠 {t('parent.devUnlock')}</button>
+          </>
         )}
       </section>
     </main>

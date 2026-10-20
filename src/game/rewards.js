@@ -8,14 +8,29 @@ export function starsFor(correct, total) {
   return 0;
 }
 
-// Coins: 1 per correct answer, plus 5 for every NEW star earned on this level.
+// Points for one question: full point on the first try, half a point if the
+// child got there on a later try, nothing if the answer had to be shown.
+export function pointsFor({ solved, attempts }) {
+  if (!solved) return 0;
+  return attempts === 1 ? 1 : 0.5;
+}
+
+// Coins: 1 per point, plus 5 for every NEW star earned on this level.
 // Replaying for the same stars still pays a little, but not enough to farm.
+// `correct` may be fractional (sum of points).
 export function rewardsFor({ correct, total, previousStars = 0, isBoss = false }) {
   const stars = starsFor(correct, total);
   const newStars = Math.max(0, stars - previousStars);
-  const coins = correct + newStars * 5 + (isBoss && newStars > 0 ? 20 : 0);
-  const xp = correct * 10;
+  const coins = Math.round(correct) + newStars * 5 + (isBoss && newStars > 0 ? 20 : 0);
+  const xp = Math.round(correct * 10);
   return { stars, newStars, coins, xp };
+}
+
+// How many tries a question allows before the answer is shown.
+export function maxAttemptsFor(question) {
+  if (question.format === 'truefalse') return 1;
+  if (question.format === 'choice') return Math.min(3, question.choices.length - 1);
+  return 3;
 }
 
 // Player level grows a bit slower each time: 100 XP, then 200, then 300...

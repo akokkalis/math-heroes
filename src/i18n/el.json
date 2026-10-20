@@ -1,7 +1,6 @@
 {
   "app.title": "Μαθη-Ήρωες",
   "app.tagline": "Γίνε ήρωας των μαθηματικών!",
-
   "common.back": "Πίσω",
   "common.start": "Ξεκίνα",
   "common.continue": "Συνέχεια",
@@ -11,22 +10,18 @@
   "common.true": "Σωστό",
   "common.false": "Λάθος",
   "common.language": "Γλώσσα",
-
   "ops.add": "+",
   "ops.sub": "−",
   "ops.mul": "x",
   "ops.div": ":",
-
   "topic.add": "Πρόσθεση",
   "topic.sub": "Αφαίρεση",
   "topic.mul": "Πολλαπλασιασμός",
   "topic.div": "Διαίρεση",
   "topic.frac": "Κλάσματα",
-
   "profiles.title": "Ποιος παίζει;",
   "profiles.add": "Νέος παίκτης",
   "profiles.parents": "Γονείς",
-
   "create.title": "Νέος ήρωας",
   "create.name": "Πώς σε λένε;",
   "create.avatar": "Διάλεξε τον σύντροφό σου",
@@ -34,7 +29,6 @@
   "create.young": "6–8 χρονών",
   "create.older": "9–12 χρονών",
   "create.submit": "Πάμε!",
-
   "map.hello": "Γεια σου, {name}!",
   "map.streak": "🔥 {n} μέρες στη σειρά",
   "map.goal": "Στόχος σήμερα: {done}/{goal} πίστες",
@@ -43,7 +37,6 @@
   "map.premium": "Πλήρης έκδοση",
   "map.shop": "Κατάστημα",
   "map.switch": "Αλλαγή παίκτη",
-
   "world.lion.name": "Ο Λέων της Νεμέας",
   "world.lion.story": "Νίκησε το λιοντάρι με τη δύναμη της πρόσθεσης!",
   "world.hydra.name": "Η Λερναία Ύδρα",
@@ -54,16 +47,24 @@
   "world.boar.story": "Μοίρασε σωστά για να πιάσεις τον κάπρο!",
   "world.stables.name": "Οι Στάβλοι του Αυγεία",
   "world.stables.story": "Καθάρισε τους στάβλους με τα κλάσματα!",
-
   "level.progress": "Ερώτηση {n} από {total}",
   "level.isItTrue": "Είναι σωστό;",
   "level.fracQuestion": "Ποιο σύμβολο ταιριάζει;",
   "level.check": "Έλεγχος",
   "level.quit": "Έξοδος",
   "level.correctAnswer": "Η σωστή απάντηση είναι {answer}",
-  "feedback.correct": ["Μπράβο!", "Τέλεια!", "Σωστά!", "Είσαι αστέρι!", "Όπως ο Ηρακλής!"],
-  "feedback.wrong": ["Σχεδόν!", "Δεν πειράζει, συνέχισε!", "Την επόμενη φορά!"],
-
+  "feedback.correct": [
+    "Μπράβο!",
+    "Τέλεια!",
+    "Σωστά!",
+    "Είσαι αστέρι!",
+    "Όπως ο Ηρακλής!"
+  ],
+  "feedback.wrong": [
+    "Σχεδόν!",
+    "Δεν πειράζει, συνέχισε!",
+    "Την επόμενη φορά!"
+  ],
   "results.great": "Καταπληκτικά!",
   "results.good": "Πολύ καλά!",
   "results.tryAgain": "Προσπάθησε ξανά!",
@@ -72,12 +73,10 @@
   "results.xp": "+{n} XP",
   "results.replay": "Ξανά",
   "results.map": "Στον χάρτη",
-
   "shop.title": "Κατάστημα",
   "shop.use": "Διάλεξε",
   "shop.inUse": "Σε χρήση",
   "shop.notEnough": "Χρειάζεσαι κι άλλα νομίσματα!",
-
   "parent.gateTitle": "Μόνο για γονείς",
   "parent.gateQuestion": "Πόσο κάνει {a} x {b};",
   "parent.gateWrong": "Λάθος απάντηση",
@@ -98,5 +97,22 @@
   "parent.owned": "Έχετε την πλήρη έκδοση ✓",
   "parent.purchaseUnavailable": "Οι αγορές θα είναι διαθέσιμες στην έκδοση του καταστήματος.",
   "parent.devUnlock": "Δοκιμή: ξεκλείδωμα / κλείδωμα",
-  "parent.privacy": "Όλα τα δεδομένα μένουν σε αυτή τη συσκευή."
+  "parent.privacy": "Όλα τα δεδομένα μένουν σε αυτή τη συσκευή.",
+  "topic.word": "Προβλήματα",
+  "world.apples.name": "Τα Μήλα των Εσπερίδων",
+  "world.apples.story": "Λύσε τα προβλήματα για να βρεις τα χρυσά μήλα!",
+  "level.tryAgain": "Δοκίμασε ξανά! 💪",
+  "level.hint": "Βοήθεια",
+  "hint.add": "Ξεκίνα από το {big} και μέτρα άλλα {small} προς τα πάνω.",
+  "hint.addBig": "Πρόσθεσε πρώτα τις δεκάδες και μετά τις μονάδες.",
+  "hint.sub": "Ξεκίνα από το {a} και μέτρα {b} προς τα πίσω.",
+  "hint.subBig": "Αφαίρεσε πρώτα τις δεκάδες και μετά τις μονάδες.",
+  "hint.mul": "{expr} σημαίνει: {expansion}",
+  "hint.mulTable": "Θυμήσου την προπαίδεια του {a}.",
+  "hint.div": "Ποιος αριθμός επί {b} κάνει {a};",
+  "hint.fracSame": "Ο παρονομαστής είναι ίδιος. Σύγκρινε τους αριθμητές (τους αριθμούς πάνω).",
+  "hint.fracDiff": "Ποιο κομμάτι είναι μεγαλύτερο; Δοκίμασε να κάνεις τους παρονομαστές ίδιους.",
+  "hint.word": "Σκέψου ποια πράξη χρειάζεται:",
+  "results.retries": "+{n} με δεύτερη προσπάθεια",
+  "parent.testNote": "Οι αγορές δεν λειτουργούν ακόμα. Χρησιμοποιήστε το κουμπί δοκιμής."
 }
